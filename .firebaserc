@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "museum-ticket-shop": {
+      "hosting": {
+        "museum-ticket-shop": [
+          "museum-ticket-shop"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "museum-ticket-shop"
+  }
+}

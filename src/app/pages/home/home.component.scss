@@ -1,0 +1,51 @@
+ul {
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+ul li a{
+    width: 20rem;
+    height: 25rem;
+    border:  1px solid green;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: #00cc00;
+}
+ul li img{
+    margin-bottom: 25px;
+}
+
+li a:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+.content{
+    padding: .5rem 1rem;
+    position: relative;
+    color: black;
+    font-size: medium;
+    display: flex;
+    justify-content: space-between;
+
+}
+.price{
+    padding-top: .7rem;
+    float: left;
+}
+.name{
+    float: right;
+}
+

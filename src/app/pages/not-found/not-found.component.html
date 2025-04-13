@@ -1,0 +1,9 @@
+<mat-card *ngIf="visible" class="not-found-card">
+    <mat-card-header>
+      <mat-card-title>{{notFoundMessage}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <a routerLink="{{resetLinkRoute}}" mat-button>{{resetLinkText}}</a>
+    </mat-card-content>
+</mat-card>
+  

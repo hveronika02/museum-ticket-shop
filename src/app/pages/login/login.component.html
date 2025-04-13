@@ -1,0 +1,19 @@
+<div class="login-form">
+    <h1>Login</h1>
+  <div class="form">
+      <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="text" [formControl]="email" />
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" [formControl]="password" />
+    </div>
+    <div class="form-actions">
+      <button (click)="login()">Login</button>
+      <button [routerLink]="'/signup'">Sign Up</button>
+    </div>
+  </div>
+  
+</div>
+  

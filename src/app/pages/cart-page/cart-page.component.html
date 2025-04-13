@@ -1,0 +1,50 @@
+<app-not-found [visible]="!cart || cart.items.length <=0"
+notFoundMessage="Cart Page is empty"
+resetLinkText="Go to Home Page"
+>
+
+</app-not-found>
+<div *ngIf="cart && cart.items.length > 0" class="container">
+    <ul>
+        <li *ngFor="let cartItem of cart.items">
+            <div>
+                <img [src]="'assets/images/' + cartItem.ticket.imageUrl" [alt]="cartItem.ticket.name">
+            </div>
+            <div>
+                <a routerLink="/ticket/{{cartItem.ticket.id}}">
+                    {{cartItem.ticket.name}}
+                </a>
+            
+            </div>
+            <div>
+                <select #quantitySelect (change)="changeQuantity(cartItem,
+                quantitySelect.value)" [value]="cartItem.quantity">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    
+                </select>
+            </div>
+            <div>
+                {{cartItem.ticket.price | priceHUF}} 
+            </div>
+            <div>
+                <button class="remove-button" (click)="removeFromCart(cartItem)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        </li>
+    </ul>
+
+    <div class="checkout">
+        <div>
+            <div class="tickets">{{cart.totalCount}}</div>
+            <div class="total-price">{{cart.totalPrice | priceHUF}} </div>
+            
+        </div>
+    </div>
+
+</div>
+

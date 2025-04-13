@@ -1,0 +1,25 @@
+<app-search></app-search>
+<app-tags></app-tags>
+
+
+<app-not-found [visible]="!tickets || tickets.length <= 0" resetLinkText="Reset Search"></app-not-found>
+
+<ul class="card-list">
+  <li *ngFor="let ticket of tickets" class="card-list-item">
+    <a routerLink="/ticket/{{ticket.id}}" class="card-link">
+      <mat-card class="card">
+        <img mat-card-image [src]="'assets/images/' + ticket.imageUrl" alt=""
+        [style.width]="'100%'"
+        [style.height]="'320px'">
+        <mat-card-content class="card-content">
+          <div class="card-title">
+            {{ticket.name}}
+          </div>
+          <div class="card-subtitle">
+            Price: {{ticket.price | priceHUF}}
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </a>
+  </li>
+</ul>
