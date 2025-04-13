@@ -61,7 +61,7 @@ export class TicketService {
 
   getAllTags(): Tag[] {
     return [
-      { name: 'All exhibition', count: 10 },
+      { name: 'All exhibition', count: 7 },
       { name: 'Literary', count: 1 },
       { name: 'Photography', count: 1 },
       { name: 'Art', count: 6 },
